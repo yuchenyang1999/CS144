@@ -83,7 +83,10 @@ void StreamReassembler::check_overlap() {
                     index2beDeleted.emplace(iter_ol->first);
                 }
             }
-            //iter = iter_ol;
+            iter = iter_ol;
+            if(iter == _unassembled_bytes.end()) {
+                break;
+            }
         }
     }
 
